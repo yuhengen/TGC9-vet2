@@ -18,3 +18,12 @@ const Route = use('Route')
 
 Route.on('/').render('welcome')
 Route.get('/owners', 'OwnerController.index')
+
+Route.get('/pets/create', 'PetController.create')
+Route.post('/pets/create', 'PetController.processCreate')
+
+Route.get('/users/register', 'UserController.register')
+Route.post('/users/register', 'UserController.processRegister')
+
+Route.get('users/login', 'UserController.login')
+Route.post('users/login', 'UserController.processLogin')
